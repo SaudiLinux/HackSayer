@@ -1,1 +1,55 @@
-
+{
+  "reconnaissance": {
+    "dns_lookup": true,
+    "subdomain_discovery": true,
+    "port_scanning": true,
+    "whois_lookup": true,
+    "technology_detection": true,
+    "ssl_analysis": true,
+    "directory_bruteforce": true,
+    "wordlist_path": "config/wordlists/common.txt",
+    "threads": 10,
+    "timeout": 5
+  },
+  "scanning": {
+    "web_vulnerability_scan": true,
+    "network_scan": true,
+    "ssl_scan": true,
+    "service_scan": true,
+    "threads": 10,
+    "timeout": 10
+  },
+  "exploitation": {
+    "auto_exploit": false,
+    "manual_mode": true,
+    "threads": 5,
+    "timeout": 30
+  },
+  "post_exploitation": {
+    "privilege_escalation": true,
+    "lateral_movement": true,
+    "data_exfiltration": true,
+    "persistence": true
+  },
+  "evasion": {
+    "user_agent_rotation": true,
+    "header_randomization": true,
+    "delays": true,
+    "proxy_rotation": false,
+    "request_fragmentation": false
+  },
+  "logging": {
+    "level": "INFO",
+    "file_logging": true,
+    "console_logging": true,
+    "log_directory": "logs",
+    "max_log_size": "10MB",
+    "backup_count": 5
+  },
+  "output": {
+    "format": "json",
+    "save_results": true,
+    "output_directory": "reports",
+    "generate_report": true
+  }
+}
