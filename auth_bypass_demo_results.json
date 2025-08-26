@@ -1,0 +1,63 @@
+{
+  "target": "http://testphp.vulnweb.com",
+  "demonstration_timestamp": "2025-08-26 18:03:15",
+  "techniques_demonstrated": [
+    {
+      "technique": "brute_force_attack",
+      "results": [],
+      "timestamp": "2025-08-26 18:06:05"
+    },
+    {
+      "technique": "sql_injection_bypass",
+      "successful_payloads": [],
+      "timestamp": "2025-08-26 18:06:34"
+    },
+    {
+      "technique": "session_hijacking",
+      "session_analysis": [],
+      "timestamp": "2025-08-26 18:06:36"
+    },
+    {
+      "technique": "privilege_escalation",
+      "accessible_panels": [
+        {
+          "url": "http://testphp.vulnweb.com/admin",
+          "method": "privilege_escalation",
+          "technique": "Direct admin access",
+          "status": "accessible",
+          "content_length": 262
+        }
+      ],
+      "total_attempted": 1,
+      "timestamp": "2025-08-26 18:06:45"
+    },
+    {
+      "technique": "sensitive_data_detection",
+      "admin_panels": [
+        {
+          "url": "http://testphp.vulnweb.com/admin",
+          "status": 200,
+          "admin_detected": true,
+          "content_length": 262
+        }
+      ],
+      "backup_files": [],
+      "database_exposure": [],
+      "sensitive_directories": [
+        {
+          "directory": "/admin",
+          "url": "http://testphp.vulnweb.com/admin",
+          "status": 200,
+          "accessible": true,
+          "directory_listing": true
+        }
+      ],
+      "timestamp": "2025-08-26 18:07:52"
+    },
+    {
+      "technique": "credential_stuffing",
+      "results": [],
+      "timestamp": "2025-08-26 18:08:10"
+    }
+  ]
+}

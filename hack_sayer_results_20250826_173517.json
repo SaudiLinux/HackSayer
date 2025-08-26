@@ -1,0 +1,52 @@
+{
+  "target": "scanme.nmap.org",
+  "recon_data": {
+    "target": "scanme.nmap.org",
+    "dns_info": {
+      "A": [
+        "45.33.32.156"
+      ],
+      "AAAA": [
+        "2600:3c01::f03c:91ff:fe18:bb2f"
+      ],
+      "MX": [],
+      "NS": [],
+      "TXT": [],
+      "CNAME": []
+    },
+    "subdomains": [],
+    "ports": {
+      "22": "ssh",
+      "80": "http"
+    },
+    "services": {},
+    "whois_info": {
+      "type": "domain",
+      "domain_name": [
+        "nmap.org",
+        "NMAP.ORG"
+      ],
+      "registrar": "DYNADOT LLC",
+      "creation_date": "1999-01-18 05:00:00",
+      "expiration_date": "2029-01-18 05:00:00",
+      "name_servers": [
+        "ns1.linode.com",
+        "ns2.linode.com",
+        "ns3.linode.com",
+        "ns4.linode.com",
+        "ns5.linode.com"
+      ],
+      "status": "clientTransferProhibited https://icann.org/epp#clientTransferProhibited",
+      "emails": "abuse@dynadot.com",
+      "org": "Super Privacy Service LTD c/o Dynadot",
+      "country": "US"
+    },
+    "tech_stack": {},
+    "osint_data": {},
+    "ssl_info": {},
+    "directory_bruteforce": []
+  },
+  "vulnerabilities": [],
+  "exploitation_results": {},
+  "post_exploitation_data": {}
+}
