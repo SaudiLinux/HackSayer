@@ -1,0 +1,4 @@
+2025-08-26 17:44:33,686 - HackSayer - INFO - [32m[INFO][0m Evasion techniques applied successfully
+2025-08-26 17:45:05,817 - HackSayer - INFO - [32m[INFO][0m Vulnerability scanning completed successfully
+2025-08-26 17:45:05,822 - HackSayer - INFO - [32m[INFO][0m Results saved to hack_sayer_results_20250826_174505.json
+2025-08-26 17:45:05,828 - HackSayer - ERROR - [31m[ERROR][0m Failed to generate report: 'charmap' codec can't encode characters in position 7-79: character maps to <undefined>

@@ -1,0 +1,3 @@
+2025-08-26 17:35:17,016 - HackSayer - INFO - [32m[INFO][0m Reconnaissance phase completed successfully
+2025-08-26 17:35:17,018 - HackSayer - INFO - [32m[INFO][0m Results saved to hack_sayer_results_20250826_173517.json
+2025-08-26 17:35:17,021 - HackSayer - ERROR - [31m[ERROR][0m Failed to generate report: 'charmap' codec can't encode characters in position 7-79: character maps to <undefined>
