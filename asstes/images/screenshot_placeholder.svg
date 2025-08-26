@@ -1,1 +1,49 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Terminal background -->
+  <rect width="800" height="600" fill="#000000"/>
+  
+  <!-- Terminal window -->
+  <rect x="10" y="10" width="780" height="580" fill="#1a1a1a" stroke="#00ff00" stroke-width="2"/>
+  
+  <!-- Terminal header -->
+  <rect x="10" y="10" width="780" height="30" fill="#00ff00" opacity="0.2"/>
+  <text x="20" y="30" font-family="monospace" font-size="14" fill="#00ff00">HackSayer - Advanced Penetration Testing Tool</text>
+  
+  <!-- Terminal content -->
+  <text x="20" y="60" font-family="monospace" font-size="12" fill="#00ff00">$ python3 HackSayer.py -t example.com --full-scan --evade</text>
+  <text x="20" y="80" font-family="monospace" font-size="12" fill="#00ff00">[INFO] Starting HackSayer v1.0.0</text>
+  <text x="20" y="100" font-family="monospace" font-size="12" fill="#00ff00">[RECON] Starting reconnaissance phase for example.com</text>
+  <text x="20" y="120" font-family="monospace" font-size="12" fill="#00ff00">[DNS] Found 5 subdomains: www, mail, ftp, admin, api</text>
+  <text x="20" y="140" font-family="monospace" font-size="12" fill="#00ff00">[PORT] Open ports: 21, 22, 80, 443, 3306</text>
+  <text x="20" y="160" font-family="monospace" font-size="12" fill="#00ff00">[SCAN] Starting vulnerability scanning...</text>
+  <text x="20" y="180" font-family="monospace" font-size="12" fill="#ffff00">[VULN] SQL injection vulnerability found on /login.php</text>
+  <text x="20" y="200" font-family="monospace" font-size="12" fill="#ffff00">[VULN] XSS vulnerability found on /search.php</text>
+  <text x="20" y="220" font-family="monospace" font-size="12" fill="#ff0000">[VULN] LFI vulnerability found on /download.php</text>
+  <text x="20" y="240" font-family="monospace" font-size="12" fill="#00ff00">[EVASION] Applying evasion techniques...</text>
+  <text x="20" y="260" font-family="monospace" font-size="12" fill="#00ff00">[EXPLOIT] Attempting exploitation of identified vulnerabilities...</text>
+  <text x="20" y="280" font-family="monospace" font-size="12" fill="#00ff00">[SUCCESS] Successfully exploited SQL injection</text>
+  <text x="20" y="300" font-family="monospace" font-size="12" fill="#00ff00">[POST] Starting post-exploitation analysis...</text>
+  <text x="20" y="320" font-family="monospace" font-size="12" fill="#00ff00">[SYSTEM] OS: Linux Ubuntu 20.04</text>
+  <text x="20" y="340" font-family="monospace" font-size="12" fill="#00ff00">[CREDS] Found admin credentials: admin:password123</text>
+  <text x="20" y="360" font-family="monospace" font-size="12" fill="#00ff00">[FILES] Sensitive files discovered: /etc/passwd, /etc/shadow</text>
+  <text x="20" y="380" font-family="monospace" font-size="12" fill="#00ff00">[REPORT] Generating comprehensive report...</text>
+  <text x="20" y="400" font-family="monospace" font-size="12" fill="#00ff00">[COMPLETE] Scan completed. Results saved to reports/example.com/</text>
+  <text x="20" y="420" font-family="monospace" font-size="12" fill="#00ff00">[INFO] Total vulnerabilities found: 8</text>
+  <text x="20" y="440" font-family="monospace" font-size="12" fill="#00ff00">[INFO] Critical: 2, High: 3, Medium: 2, Low: 1</text>
+  
+  <!-- Cursor -->
+  <rect x="20" y="460" width="10" height="15" fill="#00ff00" opacity="0.7"/>
+  <text x="35" y="472" font-family="monospace" font-size="12" fill="#00ff00">_</text>
+  
+  <!-- Matrix rain effect -->
+  <g opacity="0.4">
+    <text x="100" y="100" font-family="monospace" font-size="8" fill="#00ff00">101010</text>
+    <text x="200" y="150" font-family="monospace" font-size="8" fill="#00ff00">010101</text>
+    <text x="300" y="200" font-family="monospace" font-size="8" fill="#00ff00">110011</text>
+    <text x="400" y="250" font-family="monospace" font-size="8" fill="#00ff00">001100</text>
+    <text x="500" y="300" font-family="monospace" font-size="8" fill="#00ff00">111000</text>
+    <text x="600" y="350" font-family="monospace" font-size="8" fill="#00ff00">000111</text>
+    <text x="700" y="400" font-family="monospace" font-size="8" fill="#00ff00">101101</text>
+  </g>
+</svg>
