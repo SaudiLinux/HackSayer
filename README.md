@@ -1,7 +1,7 @@
 # HackSayer - أداة اختبار الاختراق الشاملة
 
 <p align="center">
-  <img src="assets/hacksayer_logo.svg" alt="hacksayer Logo" width="200">
+  <img src="assets/hacksayer_logo.svg" alt="HackSayer Logo" width="200">
   <br>
   <strong>أداة اختبار الاختراق المتقدمة للأنظمة العربية</strong>
   <br>
@@ -71,7 +71,13 @@ pip install -r requirements.txt
 
 ### الأوامر الأساسية
 ```bash
-# فحص شامل
+# فحص شامل تلقائي (جميع الوحدات تُشغل تتابعياً)
+python HackSayer.py -t https://tayseerme.com
+
+# أو باستخدام -u
+python HackSayer.py -u http://example.com
+
+# فحص شامل صريح
 python HackSayer.py -u http://example.com --full-scan
 
 # استطلاع فقط

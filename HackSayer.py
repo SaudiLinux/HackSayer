@@ -258,8 +258,8 @@ Examples:
     if args.config:
         hacksayer.config.load_config(args.config)
     
-    # Apply evasion if requested
-    if args.evasion:
+    # Apply evasion techniques automatically for full scan or when explicitly requested
+    if args.evasion or not any([args.recon, args.scan, args.exploit, args.post]):
         hacksayer.apply_evasion_techniques()
     
     # Determine which phases to run
@@ -276,7 +276,7 @@ Examples:
     elif args.post:
         phases = ['post']
     else:
-        # Default to full scan
+        # Default to full scan when -t is provided without specific phase flags
         phases = ['recon', 'scan', 'exploit', 'post']
     
     # Execute phases
