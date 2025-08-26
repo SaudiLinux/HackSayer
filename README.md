@@ -1,7 +1,7 @@
 # HackSayer - أداة اختبار الاختراق الشاملة
 
 <p align="center">
-  <img src="assets/hacksayer_logo.svg" alt="HackSayer Logo" width="200">
+  <img src="assets/hacksayer_logo.svg" alt="hacksayer Logo" width="200">
   <br>
   <strong>أداة اختبار الاختراق المتقدمة للأنظمة العربية</strong>
   <br>
